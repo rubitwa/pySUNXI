@@ -26,6 +26,8 @@ The available constants are:
     LOW         ->      0
     INPUT       ->      0
     OUPTUT      ->      1
+    PER         ->      2
+    PULLNONE    ->      0
     PULLUP      ->      1
     PULLDOWN    ->      2
 
@@ -85,7 +87,7 @@ GPIO::
     gpio.setcfg(gpio.PE(11), gpio.INPUT)   #Configure PE11 as input
     gpio.setcfg(gpio.PE(11), 0)   #Same as above
 
-    gpio.pullup(gpio.PE(11), 0)   #Clear pullups
+    gpio.pullup(gpio.PE(11), gpio.PULLNONE)    #Clear pullups
     gpio.pullup(gpio.PE(11), gpio.PULLDOWN)    #Enable pull-down
     gpio.pullup(gpio.PE(11), gpio.PULLUP)  #Enable pull-up
 
